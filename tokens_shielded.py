@@ -167,7 +167,7 @@ def tokens_update(token_key_dict: dict):
                 process(transaction["openfield"]["nonce"])
 
                 if action["operation"] == "move":
-                    account_add_to(account=action["recipient"], token=action["name"], amount=1, debtor=transaction["address"])
+                    account_add_to(account=action["recipient"], token=action["name"], amount=action["amount"], debtor=transaction["address"])
 
                 elif action["operation"] == "make":
                     token_genesis(account=action["recipient"], token=action["name"], amount=action["amount"])
