@@ -255,7 +255,7 @@ def account_take_from(account: str, token: str, amount: int):
 
 
 def load_tokens():
-    token_paths = glob.glob('shielded_keys\*.json')
+    token_paths = glob.glob('shielded_keys/*.json')
 
     token_names = []
     for token_path in token_paths:
